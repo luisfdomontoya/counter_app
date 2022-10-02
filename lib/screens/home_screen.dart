@@ -8,9 +8,8 @@ class HomeScreen extends StatelessWidget {
     const $fontsize20 = TextStyle(fontSize: 20);
     return Scaffold(
       appBar: AppBar(
-        title: const Center(
-          child: Text('HomeScreen'),
-        ),
+        centerTitle: true,
+        title: const Text('HomeScreen'),
       ),
       body: Center(
         child: Column(
@@ -26,6 +25,10 @@ class HomeScreen extends StatelessWidget {
             ),
           ],
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: const Icon(Icons.add),
+        onPressed: () {},
       ),
     );
   }
