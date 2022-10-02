@@ -33,12 +33,35 @@ class _CounterScreenState extends State<CounterScreen> {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        child: const Icon(Icons.add),
-        onPressed: () {
-          setState(() => counter++);
-        },
-      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButton: const CustomFloatingActions(),
+    );
+  }
+}
+
+class CustomFloatingActions extends StatelessWidget {
+  const CustomFloatingActions({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: const [
+        FloatingActionButton(
+          onPressed: null,
+          child: Icon(Icons.exposure_plus_1),
+        ),
+        FloatingActionButton(
+          onPressed: null,
+          child: Icon(Icons.exposure_outlined),
+        ),
+        FloatingActionButton(
+          onPressed: null,
+          child: Icon(Icons.exposure_minus_1),
+        ),
+      ],
     );
   }
 }
